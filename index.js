@@ -5,10 +5,20 @@ const bodyParser = require('body-parser')
 const hpp = require('hpp')
 // const csrf = require('csurf')
 const { engine } = require('express-handlebars')
+const basicAuth = require('express-basic-auth')
+
+require('dotenv').config()
 
 const { DEFAULT_APP_PORT } = require('./src/constants')
 
 const app = express()
+
+app.use(basicAuth({
+	users: {
+		[process.env.USER_NAME]: process.env.USER_PASSWORD,
+	},
+	challenge: true,
+}))
 
 app.use(express.static('public'))
 
