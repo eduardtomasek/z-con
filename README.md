@@ -1,1 +1,1 @@
-# ZDR CONTROL SERVER
+# Z-CON (aka. zdr control server)
