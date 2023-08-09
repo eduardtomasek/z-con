@@ -1,0 +1,22 @@
+{
+  "name": "z-con",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node index.js",
+    "startmon": "cross-env NODE_ENV=production nodemon index.js",
+    "debugmon": "cross-env NODE_ENV=local nodemon -L --inspect=9222 --expose-gc --trace-warnings index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "csurf": "^1.11.0",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "helmet": "^7.0.0",
+    "hpp": "^0.2.3",
+    "lodash": "^4.17.21"
+  }
+}
