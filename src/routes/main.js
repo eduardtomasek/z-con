@@ -6,6 +6,6 @@ const ApiCommandsController = require('../controllers/ApiCommandsController')
 
 const app = module.exports = express.Router()
 
-app.get('/', callController(HomepageController, 'homepage'))
+app.use('/', callController(HomepageController, 'homepage'))
 
 app.post('./reboot-server', callController(ApiCommandsController, 'reboot'))

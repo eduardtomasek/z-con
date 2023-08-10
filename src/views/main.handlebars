@@ -4,18 +4,18 @@
     <h2>Zello Configuration (Z-Con)</h2>
 </div>
 
-<form action="submit.php" method="post">
+<form id="configForm" action="submit.php" method="post">
     <label for="zelloUser">Zello User:</label><br>
-    <input type="text" id="zelloUser" name="zelloUser"><br>
+    <input type="text" id="zelloUser" name="zelloUser" value="{{username}}"><br>
 
     <label for="zelloPassword">Zello Password:</label><br>
-    <input type="password" id="zelloPassword" name="zelloPassword"><br>
+    <input type="text" id="zelloPassword" name="zelloPassword" value="{{password}}"><br>
 
     <label for="zelloChannel">Zello Channel:</label><br>
-    <input type="text" id="zelloChannel" name="zelloChannel"><br>
+    <input type="text" id="zelloChannel" name="zelloChannel" value="{{zello_channel}}"><br>
 
     <label for="issuerKey">Issuer Key:</label><br>
-    <input type="text" id="issuerKey" name="issuerKey"><br>
+    <input type="text" id="issuerKey" name="issuerKey" value="{{issuer}}"><br>
 
     <label for="zelloSecretKey">Zello Secret Key:</label><br>
     <textarea id="zelloSecretKey" name="zelloSecretKey" rows="3" style="width: 250px;"></textarea><br>
