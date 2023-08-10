@@ -8,6 +8,10 @@ class BaseController {
 	renderView (view, data) {
 		return this.response.render(view, data)
 	}
+
+	renderRaw (data) {
+		return this.response.status(200).send(data)
+	}
 }
 
 module.exports = BaseController
