@@ -1,3 +1,60 @@
 body {
-	background-color: teal;
+	background-color: black;
+	color: gray;
+	font-family: Arial, sans-serif;
+}
+
+.app {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+}
+
+h2 {
+	text-align: center;
+	margin-top: 20px;
+}
+form {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 40px;
+	margin-right: 20px;
+}
+input[type="text"], input[type="password"], textarea {
+	width: 250px;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+.button-container {
+	text-align: center;
+	margin-top: 20px;
+}
+.button-container input[type="submit"] {
+	display: inline-block;
+	margin: 0 10px;
+	padding: 10px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+}
+.button-container input[type="submit"][value="Save"] {
+	background-color: green;
+	color: white;
+}
+.button-container input[type="submit"][value="Reboot"] {
+	background-color: red;
+	color: white;
+}
+#logo-container {
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+#logo {
+	width: 250px;
+	height: 97px;
 }
