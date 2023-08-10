@@ -17,7 +17,7 @@
     <label for="issuerKey">Issuer Key:</label><br>
     <input type="text" id="issuerKey" name="issuerKey" value="{{issuer}}"><br>
 
-    <label for="zelloSecretKey">Zello Secret Key:</label><br>
+    <label for="zelloSecretKey">Zello Private Key:</label><br>
     <textarea id="zelloSecretKey" name="zelloSecretKey" rows="3" style="width: 250px;"></textarea><br>
 
     <label for="rtlFmPrompt">RTL_FM Prompt:</label><br>
@@ -28,14 +28,15 @@
         <input type="submit" value="Reboot">
     </div>
 </form><br><br>
-Integer lectus quis justo. Morbi scelerisque luctus velit. Nunc auctor. 
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Nullam at arcu a est 
-sollicitudin euismod. Maecenas libero. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-Duis viverra diam non justo. Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, 
-vel sagittis velit mauris vel metus. Vivamus porttitor turpis ac leo. Nam sed tellus id magna elementum 
-tincidunt. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut 
-perferendis doloribus asperiores repellat. Fusce nibh. Praesent id justo in neque elementum ultrices. Vestibulum 
-fermentum tortor id mi. Etiam commodo dui eget wisi. Aenean vel massa quis mauris vehicula lacinia. Mauris tincidunt sem sed arcu.
+For ZDR to function properly, you need to create a new Zello account that you will register as the operator of the stream to which you will connect from your private account. It is not possible to use your account because you cannot be logged in on two devices at the same time.
+<br>
+Zello Use: Fill in the user name of the zello stream operator.<br>
+Zello Password: Fill in the password of the operator's Zello account.<br>
+Zello Channel: Enter the exact name of the channel you set up in your operator account to which this stream will be sent.<br><br>
+
+Now you will need to login to the Zello developer site at: https://developers.zello.com/keys and generate the necessary api keys.<br><br>
+Issuer Key: You can find this key once generated on the above page.<br>
+Zello Private Key: You can also find this key after generating it on the above page, you have to enter it with -----BEGIN PRIVATE KEY----- and -----END PRIVATE KEY-----
+<br><br>
+RTL_FM Prompt: In this last step, you can adjust the frequency on which ZDR will listen. I recommend studying rtl_sdr functions on the author's website. The system is preset, so if you don't know how to do it, you only need to change the frequency in KHz
 </div>
