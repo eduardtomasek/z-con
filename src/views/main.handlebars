@@ -18,10 +18,10 @@
     <input type="text" id="issuerKey" name="issuerKey" value="{{issuer}}"><br>
 
     <label for="zelloSecretKey">Zello Private Key:</label><br>
-    <textarea id="zelloSecretKey" name="zelloSecretKey" rows="3" style="width: 250px;"></textarea><br>
+    <textarea id="zelloSecretKey" name="zelloSecretKey" rows="3" style="width: 250px;">{{privateKeyFile}}</textarea><br>
 
     <label for="rtlFmPrompt">RTL_FM Prompt:</label><br>
-    <textarea id="rtlFmPrompt" name="rtlFmPrompt" rows="6" style="width: 500px;"></textarea><br> <!-- Upraveno na textové pole s 6 řádky a dvojnásobnou šířkou -->
+    <textarea id="rtlFmPrompt" name="rtlFmPrompt" rows="6" style="width: 500px;">{{runScriptFile}}</textarea><br> <!-- Upraveno na textové pole s 6 řádky a dvojnásobnou šířkou -->
 
     <div class="button-container">
         <input type="submit" value="Save">

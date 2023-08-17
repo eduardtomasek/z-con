@@ -7,14 +7,25 @@ class HomepageController extends BaseController {
 	}
 
 	homepage () {
-		if (this.request.method == "POST") {
-			const response = configFileModel.storeConfigFile(this.request.body)
-			return this.renderRaw(response)
-		 }
-
 		const configFile = configFileModel.getConfigFile()
+		const privateKeyFile = configFileModel.readFile({ path: process.env.PRIVATE_KEY_PATH })
+		const runScriptFile = configFileModel.readFile({ path: process.env.RUN_SCRIPT_PATH })
 
-		return this.renderView('main', {layout : 'index', ...configFile})
+		return this.renderView('main', {layout : 'index', ...configFile, privateKeyFile, runScriptFile })
+	}
+
+	saveFiles () {
+		const { zelloUser, zelloPassword, zelloChannel, zelloIssuerKey, zelloSecretKey, rtlFmPrompt } = this.request.body
+		
+		const config = configFileModel.storeConfigFile({ zelloUser, zelloPassword, zelloChannel, zelloIssuerKey })
+		const privateKey = configFileModel.saveFile({ path: process.env.PRIVATE_KEY_PATH, data: zelloSecretKey })
+		const runScript = configFileModel.saveFile({ path: process.env.RUN_SCRIPT_PATH, data: rtlFmPrompt })
+		
+		return this.renderRaw({
+			config,
+			privateKey,
+			runScript,
+		})
 	}
 }
 

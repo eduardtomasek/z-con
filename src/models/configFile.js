@@ -32,7 +32,23 @@ function getConfigFile () {
     return JSON.parse(rawData)
 }
 
+
+function saveFile ({ path, data }) {
+    return fs.writeFileSync(path, data.toString('utf-8'))
+}
+
+function readFile ({ path }) {
+    if (! fs.existsSync(path)) {
+        return ''
+    }
+    
+    return fs.readFileSync(path, 'utf-8')
+}
+
+
 module.exports = {
     storeConfigFile,
     getConfigFile,
+    saveFile,
+    readFile,
 }
