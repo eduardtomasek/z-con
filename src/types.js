@@ -24,7 +24,7 @@
  */
 
 /**
- * @typedef {object} ConfigCredentials
+ * @typedef {object} AuthCredentials
  * @property {string} userName
  * @property {string} userPassword
  * 
@@ -36,7 +36,7 @@
  * @typedef {object} ConfigServer
  * @property {number} port
  * 
- * @typedef {ConfigCredentials | ConfigFiles | ConfigServer} Config
+ * @typedef {AuthCredentials | ConfigFiles | ConfigServer} Config
  */
 
 module.exports = {}

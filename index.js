@@ -11,13 +11,13 @@ const basicAuth = require('express-basic-auth')
 require('dotenv').config()
 
 const server = config.server() 
-const credentials = config.credentials()
+const auth = config.auth()
 
 const app = express()
 
 app.use(basicAuth({
 	users: {
-		[credentials.userName]: credentials.userPassword,
+		[auth.userName]: auth.userPassword,
 	},
 	challenge: true,
 }))

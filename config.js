@@ -30,10 +30,10 @@ function files () {
 }
 
 /**
- * @returns {import('./src/types').ConfigCredentials}
+ * @returns {import('./src/types').AuthCredentials}
  */
-function credentials () {
-    return config.credentials
+function auth () {
+    return config.auth
 }
 
 
@@ -41,5 +41,5 @@ module.exports = {
     get,
     server,
     files,
-    credentials,
+    auth,
 }
