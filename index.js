@@ -4,18 +4,20 @@ const helmet = require('helmet')
 const bodyParser = require('body-parser')
 const hpp = require('hpp')
 // const csrf = require('csurf')
+const config = require('./config')
 const { engine } = require('express-handlebars')
 const basicAuth = require('express-basic-auth')
 
 require('dotenv').config()
 
-const { DEFAULT_APP_PORT } = require('./src/constants')
+const server = config.server() 
+const credentials = config.credentials()
 
 const app = express()
 
 app.use(basicAuth({
 	users: {
-		[process.env.USER_NAME]: process.env.USER_PASSWORD,
+		[credentials.userName]: credentials.userPassword,
 	},
 	challenge: true,
 }))
@@ -37,6 +39,6 @@ app.engine('handlebars', engine({
 
 app.use(require('./src/routes/main'))
 
-app.listen(DEFAULT_APP_PORT, () => {
-  console.log(`Example app listening on port ${DEFAULT_APP_PORT}`)
+app.listen(server.port, () => {
+  console.log(`Example app listening on port ${server.port}`)
 })

@@ -1,0 +1,11 @@
+[credentials]
+userName = "zdr"
+userPassword = "zdr"
+
+[files]
+configFilePath = "/Users/valentinohesse/Documents/projects/zellostream/config.json"
+privateKeyPath = "/Users/valentinohesse/Documents/projects/zellostream/privatekey.pem"
+runScriptPath = "/Users/valentinohesse/Documents/projects/zellostream/rtlfmzello.sh"
+
+[server]
+port = 3000

@@ -58,3 +58,7 @@ input[type="text"], input[type="password"], textarea {
 	width: 250px;
 	height: 97px;
 }
+
+.saved {
+	background-color: rgb(81, 161, 236)
+}

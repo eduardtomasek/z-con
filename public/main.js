@@ -1,5 +1,11 @@
 $( document ).ready(function() {
+	let timer = null
 	console.log('After many many years I am using jQuery again. :D')
+
+	function restoreSaveButton () {
+		$('#saveButton').removeClass('saved')
+		$('#saveButton').prop('value', 'Save')
+	}
 
 	$("#configForm" ).on( "submit", function( event ) {
 
@@ -29,38 +35,15 @@ $( document ).ready(function() {
 			}),
 			contentType: 'application/json; charset=utf-8',
 			dataType: 'json',
+			success: function (data) {
+				$('#saveButton').addClass('saved')
+				$('#saveButton').prop('value', 'SAVED')
+
+				timer = setTimeout(function () {
+					restoreSaveButton()
+					clearTimeout(timer)
+				}, 1500)
+			}
 		});
-	
-		// Put the results in a div
-		//posting.done(function( data ) {
-		//	console.log(data)
-		//} );
 	} );
-
-	/*
-	$( "#target" ).on( "submit", function( event ) {
-		alert( "Handler for `submit` called." );
-		event.preventDefault();
-	});
-	*/
-
-	/*
-	https://api.jquery.com/jquery.post/
-
-	$.ajax({
-		type: "POST",
-		url: url,
-		data: data,
-		success: success,
-		dataType: dataType
-	});
-
-
-	$.post( "ajax/test.html", function( data ) {
-  		$( ".result" ).html( data );
-	});
-
-
-	$
-	*/
 });

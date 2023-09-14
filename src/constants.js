@@ -1,5 +1,5 @@
-const DEFAULT_APP_PORT = 3000
+const CONFIGURATION_FILE = 'config.toml'
 
 module.exports = {
-	DEFAULT_APP_PORT,
+	CONFIGURATION_FILE,
 }
