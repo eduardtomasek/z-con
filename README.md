@@ -8,7 +8,7 @@ CONFIG_FILE_PATH=<path to>/config.json
 ```
 
 # Sources
-For ZDR to function properly, you need to create a new Zello account that you will register as the operator of the stream to which you will connect from your private account. It is not possible to use your account because you cannot be logged in on two devices at the same time.
+For ZDR to function properly, you need to create a new Zello account that you will register as the operator of the stream to which you will connect from your private account. It is not possible to use your account because you cannot be logged in on two devices at the same time...
 
 Zello Use: Fill in the user name of the zello stream operator.
 Zello Password: Fill in the password of the operator's Zello account.
